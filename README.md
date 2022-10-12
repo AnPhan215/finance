@@ -11,7 +11,7 @@ This program is meant for practice in pset9 of CS50x. One of the course from Har
 
 You can use my IEX API which is: pk_b8c99080a20644f892fe286076da91bf but you can have your own token by:
 
-1. Visit ([iexcloud.io/cloud-login#/register/](https://iexcloud.io/cloud-login#/register/))
+1. Visit https://iexcloud.io/cloud-login#/register/
 2. Select the “Individual” account type, then enter your name, email address, and a password, and click “Create account”.
 3. Once registered, scroll down to “Get started for free” and click “Select Start plan” to choose the free plan.
 4. Once you’ve confirmed your account via a confirmation email, visit https://iexcloud.io/console/tokens.
