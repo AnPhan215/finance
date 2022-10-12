@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form id="my-form" >
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirm" name="confirmation" placeholder="Password (again)" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+    <script>
+        document.getElementById('my-form').addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            var http = new XMLHttpRequest();
+            var url = '/register'
+
+            var formData = new FormData(document.getElementById("my-form") );
+
+            console.log(document.getElementById("my-form") );
+            console.log(formData);
+
+            http.open('POST', url, true);
+
+            http.send(formData);
+
+            http.onreadystatechange = function() {
+                if (http.readyState == 4) {
+                    if(http.status == 200){
+                        window.location.href = http.responseText;
+                    }
+                    if(http.status == 400){
+                        alert(http.responseText);
+                    }
+                }
+            }
+        });
+
+    </script>
+{% endblock %}

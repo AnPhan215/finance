@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for time in range(sumdate) %}
+
+            <tr>
+                <td class="text-start">{{ symbols[time]["symbol"] }}</td>
+                <td class="text-end">{{ shares[time]["shares"] }}</td>
+                <td class="text-end">{{ price[time]["price"] | usd}}</td>
+                <td class="text-end">{{ date[time]["date"] }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}
