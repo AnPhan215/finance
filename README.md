@@ -26,8 +26,10 @@ where value is that (pasted) value, without any space immediately before or afte
 Then:
 ```
 $ export FLASK_APP=app.py
-$ export FLASK_DEBUG=1 <sub>If you want to use debug mode</sub>
+$ export FLASK_DEBUG=1 
 ```
+<sub>You can skip FLASK_DEBUG if you do not want the debug mode</sub>
+
 # My result video:
 
 
